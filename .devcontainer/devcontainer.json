@@ -2,7 +2,7 @@
 	"name": "Python 3",
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
 
-	"workspaceFolder": "/workspaces/python_env",
+	"workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {
       "settings": {
@@ -15,6 +15,6 @@
     }
   },
   "containerEnv": {
-    "PYTHONPATH": "/workspaces/python_env"
+    "PYTHONPATH": "/workspace"
   }
 }
