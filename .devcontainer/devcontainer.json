@@ -1,7 +1,10 @@
 {
 	"name": "Python 3",
-	"image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
-
+	// "image": "mcr.microsoft.com/devcontainers/python:1-3.10-bookworm",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "python3",
 	"workspaceFolder": "/workspace",
   "customizations": {
     "vscode": {

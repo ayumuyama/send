@@ -1,5 +1,6 @@
 FROM python:3.10
-USER root
+
+# RUN useradd -m workspace
 
 RUN apt-get update
 RUN apt-get -y install locales && \
@@ -10,10 +11,14 @@ ENV LC_ALL ja_JP.UTF-8
 ENV TZ JST-9
 ENV TERM xterm
 
-COPY requirements.txt /root/
+# USER workspace
+
+RUN mkdir /workspace
+
+COPY requirements.txt /workspace/
 
 RUN apt-get install -y vim less
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 
-RUN pip install -r /root/requirements.txt
+RUN pip install -r /workspace/requirements.txt

@@ -3,11 +3,12 @@ services:
     restart: always
     build: .
     container_name: 'python3'
-    working_dir: /root/src
+    # working_dir: /workspace/src
     tty: true
     environment:
-      - PYTHONPATH=/root
+      - PYTHONPATH=/workspace
     volumes:
-      - ./src:/root/src
-      - ./results:/root/results
-      - ./app:/root/app
+      # - ./src:/workspace/src
+      # - ./results:/workspace/results
+      # - ./app:/workspace/app
+      - ./:/workspace
