@@ -19,5 +19,6 @@
   },
   "containerEnv": {
     "PYTHONPATH": "/workspace"
-  }
+  },
+  "postCreateCommand": "pip3 install --no-cache-dir -r requirements.txt"
 }
