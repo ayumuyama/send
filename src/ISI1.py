@@ -31,4 +31,4 @@ for i in range(n_neurons):
 	plt.plot(t, spikes[:, i]*(i+1), 'ko', markersize=2)
 plt.xlabel('Time (s)'); plt.ylabel('Neuron index')
 plt.xlim(0, T); plt.ylim(0.5, n_neurons+0.5)
-plt.savefig('results/ISI1.png')
+plt.savefig('../results/ISI1.png')
